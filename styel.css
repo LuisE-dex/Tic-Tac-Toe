@@ -1,0 +1,89 @@
+:root{
+    --tokensBorderColor: black;
+    --winnerColor: rgb(43, 199, 43);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 42px;
+    text-align: center;
+    margin: 30px 0 50px;
+}
+.main-container{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+
+
+    .token{
+        width: 150px;
+        height: 150px;
+        font-size: 4.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .middle{
+        border: 7px solid var(--tokensBorderColor);
+    }
+    .middle-sides{
+        border-top: 7px solid var(--tokensBorderColor);
+        border-bottom: 7px solid var(--tokensBorderColor);
+    }
+    .up-down{
+        border-left: 7px solid var(--tokensBorderColor);
+        border-right: 7px solid var(--tokensBorderColor);
+    }
+}
+.winner{
+    background-color: var(--winnerColor);
+}
+
+/* Modal */
+dialog{
+    width: 350px;
+    height: 170px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.959);
+
+    p{
+        margin: 20px 0;
+    }
+    button{
+        width: 120px;
+        height: 40px;
+        border: none;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: var(--winnerColor);
+        transition: .4s ease-in-out;
+        outline: none;
+
+        &:hover{
+            background-color: white;
+            border: 3px solid var(--winnerColor);
+            cursor: pointer;
+        }
+    }
+}
+
+/* footer */
+footer{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
